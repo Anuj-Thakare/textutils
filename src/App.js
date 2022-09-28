@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import Navbar from './components/Navbar';
@@ -10,8 +10,7 @@ import React, { useState } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
   } from "react-router-dom";
   
 function App() {
@@ -59,7 +58,7 @@ function App() {
           <TextForm showAlert={showAlert} heading="Enter the text" mode={mode} />
           </Route>
         </Switch>
-           {/* <TextForm showAlert={showAlert} heading="Enter the text" mode={mode} /> */}
+           <TextForm showAlert={showAlert} heading="Enter the text" mode={mode} />
      </div>
      </Router>
 
