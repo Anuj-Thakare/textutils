@@ -45,7 +45,7 @@ function App() {
   }
 
   return (
-    <>
+    <div>
        <Router>
         <Navbar title="Textutils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
@@ -63,80 +63,7 @@ function App() {
      </Router>
 
       
-    </>
+    </div>
   );
 }
 export default App;
-// import './App.css';
-// import React,{useState} from 'react';
-// import Navbar from './component/Navbar';
-// import TextForm from './component/TextForm';
-// import Alert from './component/Alert';
-// import About from './component/About';
-
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
-
-
-
-// function App() {
-//   const [mode, setmode] = useState('light');
-//   const [alert, setalert] = useState(null);
-
-// const showmealert=(message,type)=>{
-// setalert({
-//   msg:message,
-//   typ:type
-// })
-// setTimeout(() => {
-//   setalert(null);
-  
-// }, 1000);
-   
-// }
-// const toggleMode=()=>{
-//     if(mode === 'light'){
-//       setmode('dark');
-//       document.body.style.backgroundColor='grey';
-//       showmealert("DARK MODE ENABLED","success");
-//       document.title= 'TEXTUTILS-DARK MODE';
-//     }
-//     else{
-//       setmode('light');
-//       document.body.style.backgroundColor='white';
-//       showmealert("LIGHT MODE ENABLED",'success');
-//       document.title= 'TEXTUTILS-LIGHT MODE';
-//     }
-// }
-
-
-// return (
-// <>
-// <Router>
-
-// <Navbar TITLE="TEXTUTILS" moded={mode} toggleModed={toggleMode} enablemoded={mode==='light'?'ENABLE DARK MODE':'ENABLE LIGHT MODE'}/>
-// <Alert alert={alert}/>
-
-// <div className="container my-3">
-  
-//   <Switch>
-//           <Route exact path="/about">
-//             <About moded={mode}/>
-//           </Route>
-//           <Route exact path="/">
-           
-//           <TextForm heading="ENTER THE TEXT AS PER YOUR CHOICE" moded={mode} showmealert={showmealert}/>
-//           </Route>
-//   </Switch>
-//   </div>
-//   </Router>
-
-
-// </>
-//  ); 
-// }
-// export default App;
